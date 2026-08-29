@@ -1,0 +1,17 @@
+# ============================================================================
+# dsh-ui-boost —— DSH 界面增强 bundle patch
+# ============================================================================
+# 这是插件的"挂载声明"。DSH 启动时按 bundle 层栈叠加各插件 patch，
+# 本文件把 dsh-ui-boost 行插入 web profile 的配置树：
+#   - 行名 = 包名，loader 激活 node 半端（lib/index.js，提供设置持久化 API）
+#   - 包声明了 dsh.client，client-modules 会以 /plugins/dsh-ui-boost/client.js
+#     把浏览器半端（lib/client.js）提供给页面
+#
+# 安装方式（本地开发安装，pnpm link 协议）：
+#   dsh plugin --profile web add link:<本目录绝对路径>
+# 安装后自动加入 profile 的 dsh.profile.bundles 层；重启 web 进程生效。
+# ============================================================================
+
+- insert:
+    - id: dsh-ui-boost
+      name: dsh-ui-boost
