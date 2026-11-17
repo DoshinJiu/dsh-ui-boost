@@ -1,6 +1,6 @@
 {
   "name": "dsh-ui-boost",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "DSH Web 界面增强：QQ 聊天模式（气泡+联系人侧栏）、RGB 调色、Tool 卡片折叠、输入区状态条（含 token 估算）",
   "keywords": [
     "dsh",
